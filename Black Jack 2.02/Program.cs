@@ -49,20 +49,20 @@ namespace ____
                 {
                     int value6 = value[rnd.Next(0, 11)];
                     string suit4 = suits[rnd.Next(0, 4)];
-
+                    playervalue = value6 + playerstart;
                     Console.WriteLine("Du har nu fått ett nytt kort");
                     Console.WriteLine($"Ditt nya kort kommer att vara {suit4} {value6}");
-                    Console.WriteLine($"Du kommer nu ha {value6 + playerstart} poäng");
+                    Console.WriteLine($"Du kommer nu ha {playervalue} poäng");
                     Console.WriteLine("Vill du dra ett nytt kort (y/n)");
                     string val2 = Console.ReadLine();
                     val2.ToLower();
-
+                    playerstart = playervalue;
                     while (val2 == "y")
                     {
                         sant = true;
                         break;
                     }
-                     playervalue = value6 + playerstart;
+
 
                     while (val2 == "n")
                     {
